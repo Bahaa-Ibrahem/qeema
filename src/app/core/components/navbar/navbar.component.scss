@@ -1,0 +1,48 @@
+@import "../../../../assets/styles/common-variables";
+@import "../../../../assets/styles/mixins";
+
+.header {
+    color: var(--theme-color);
+    width: 100%;
+    .row {
+        border-bottom: 1px solid $primary-color;
+        margin-left: initial;
+        margin-right: initial;
+        height: 120px;
+    }
+
+    .log {
+        display: block;
+        float: right;
+        width: 100px;
+    }
+
+    mat-list {
+        mat-list-item {
+            img {
+                width: 75px;
+                height: 75px;
+                border-radius: 50%;
+                padding: 3px;
+                background-color: #fff;
+                border: 3px solid $primary-color;
+
+                &:hover {
+                    // background-color: $secondary-color;
+                }
+            }
+        }
+    }
+
+
+    .sign-btn {
+        border-radius: $border-radius-xxlg;
+        background-color: transparent;
+        border-color: #ccc;
+        color: var(--theme-color);
+    }
+    
+    .lang {
+        @include rtl(margin, end, 10px);
+    }
+}

@@ -1,0 +1,20 @@
+<div class="suggestions">
+    <div class="title">
+        <h2>Suggestions for you</h2>
+        <span>See All</span>
+    </div>
+    <div class="list mt-4">
+        <ul *ngIf="cardList.length > 0">
+            <li class="mb-3" *ngFor="let card of cardList">
+                <div class="image">
+                    <img [src]="card.image" alt="">
+                    <div class="text">
+                        <h3>{{card.name}}</h3>
+                        <span>@{{card.name}}</span>
+                    </div>
+                </div>
+                <button [class.visited] ="card.isFollowed == true" (click)="onFollow(card.id)" class="btn">Follow</button>
+            </li>
+        </ul>
+    </div>
+</div>

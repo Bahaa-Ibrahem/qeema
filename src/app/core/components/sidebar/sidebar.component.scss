@@ -1,0 +1,103 @@
+@import "../../../../assets/styles/common-variables";
+@import "../../../../assets/styles/mixins";
+
+.side-bar {
+  height: 100vh;
+  width: 248px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  background-color: $white;
+  overflow: hidden;
+  z-index: 99999;
+  position: absolute;  
+
+  .side-bar-container {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+
+    .side-bar-brand {
+      padding: 0;
+      transition: 0.3s opacity;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: flex-start;
+      @include rtl(padding, start , 10px);
+
+      img,svg {
+        align-self: center;
+        width: 55px;
+        height: 30px;
+        object-fit: contain;
+      }
+
+      i.fa-sharp {
+        color: $tertiary-color;
+        font-size: xx-large;
+        @include rtl(margin, end , 10px);
+      }
+      
+      h2 {
+        color: $secondary-color;
+        margin-bottom: 0;
+      }
+    }
+
+    .icons-list {
+      padding: 0;
+      margin: 0;
+      margin-top: 50px;
+      list-style: none;
+
+      li {
+        a {
+          display: flex;
+          justify-content: space-between;
+          padding: 15px 28px;
+          margin: 10px auto;
+          color: #fff;
+          font-size: 14px;
+          transition: all 0.3s ease-out;
+          cursor: pointer;
+
+          i {
+            @include rtl(padding, end , 20px);
+            font-size: 22px;
+            color: #ccb8f0;
+          }
+
+          span {
+            font-size: 16px;
+            color: #ccb8f0;
+          }
+        }
+
+        &.active {
+            box-shadow: 0 4px 22px 0 rgba(0, 0, 0, 0.05);;
+          i {
+            color: $tertiary-color;
+          }
+          
+          img {
+            color: $secondary-color;
+          }
+
+          span {
+
+            color: $secondary-color;
+          }
+        }
+
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="cards mt-3">
+            <h2>Feeds</h2>
+            <ul>
+                <li class="px-3 clickable" (click)="getAll()">All</li>
+                <li class="px-3 clickable" (click)="filterFollow()">Following</li>
+                <li class="px-3 clickable">Newest</li>
+                <li class="px-3 clickable">Popular</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <app-card [filter]="filterName"></app-card>
+    </div>
+</div>

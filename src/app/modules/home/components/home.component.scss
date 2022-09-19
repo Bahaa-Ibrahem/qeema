@@ -1,0 +1,23 @@
+@import "../../../../assets/styles/common-variables";
+@import "../../../../assets/styles/mixins";
+
+.cards {
+  display: flex;
+  align-items: baseline;
+  
+  h2 {
+    margin-bottom: 0;
+    color: $secondary-color;
+  }
+
+  ul {
+    display: flex;
+    margin-inline-start: auto;
+    list-style: none;
+
+    li {
+      color: $primary-color;
+      cursor: pointer;
+    }
+  }
+}

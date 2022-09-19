@@ -1,0 +1,17 @@
+@import "../../../../assets/styles/common-variables";
+@import "../../../../assets/styles/mixins";
+
+main {
+  height: 100vh;
+  overflow: hidden;
+
+  .main-content {
+    background-color: #e9f1ff;
+
+    .main-page {
+      overflow-y: auto;
+      overflow-x: hidden;
+      border-inline-end: 1px solid $primary-color;
+    }
+  }
+}

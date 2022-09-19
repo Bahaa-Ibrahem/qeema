@@ -1,0 +1,23 @@
+<div class="side-bar">
+    <div class="side-bar-container">
+        <div class="top-icons mt-4">
+            <div class="side-bar-brand clickable">
+                <a [routerLink]="['/home']">
+                    <i class="fa-sharp fa-solid fa-circle-notch"></i>
+                    <!-- <img src="../../../../assets/images/logo/logo.svg" class="img-fluid" alt=""> -->
+                </a>
+                <h2>Cofeed</h2>
+            </div>
+            <ul class="icons-list">
+                <li *ngFor="let nav of navItems;let i = index" routerLink="/home" [class.active]="selectedIndex === i" (click)="setIndex(i)">
+                    <a>
+                        <span>
+                            <i [class]="nav.class"></i>
+                            <span> {{nav.name}} </span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
